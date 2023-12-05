@@ -10,7 +10,7 @@ const Playground = (props) => {
 
   const callGet = () => {
     httpClient
-      .get('persons')
+      .get('users')
       .then((r) => {
         console.log('GET', r.data);
         setGetResult('Successful');
@@ -20,7 +20,7 @@ const Playground = (props) => {
 
   const callPost = () => {
     httpClient
-      .post('persons', {
+      .post('users', {
         firstName: 'Krishna',
         lastName: 'Sharma',
         email: 'krishna@gmail.com',
@@ -35,7 +35,7 @@ const Playground = (props) => {
 
   const callPut = () => {
     httpClient
-      .put('persons/1', {
+      .put('users/1', {
         firstName: 'Krishna',
         lastName: 'Sharma',
         email: 'krishna@gmail.com',
@@ -50,7 +50,7 @@ const Playground = (props) => {
 
   const callPatch = () => {
     httpClient
-      .patch('persons/1', {
+      .patch('users/1', {
         firstName: 'Krishna',
         lastName: 'Sharma',
         email: 'krishna@gmail.com',
@@ -65,7 +65,7 @@ const Playground = (props) => {
 
   const callDelete = () => {
     httpClient
-      .delete('persons/1')
+      .delete('users/1')
       .then((r) => {
         console.log('DELETE', r.data);
         setDeleteResult('Successful');
